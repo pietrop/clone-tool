@@ -44,7 +44,7 @@ For now Mac only, but it's technically possible to add Linux and Windows electro
 - [`copy-dir`](https://www.npmjs.com/package/copy-dir) for copying the folder recursivly
 - A local modified version of [`dirsum`](https://github.com/mcavage/node-dirsum#readme) to get a checksum of the source and dest folder, as well as the individual file, to double check integrity of the copy using `md5`
 
-## Documentation
+<!-- ## Documentation
 
 There's a [docs](./docs) folder in this repository.
 
@@ -54,7 +54,7 @@ There's a [docs](./docs) folder in this repository.
 
 > An architectural decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences.
 
-We are using [this template for ADR](https://gist.github.com/iaincollins/92923cc2c309c2751aea6f1b34b31d95)
+We are using [this template for ADR](https://gist.github.com/iaincollins/92923cc2c309c2751aea6f1b34b31d95) -->
 
 ## Development env
 
