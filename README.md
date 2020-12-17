@@ -87,10 +87,6 @@ _NA_
 
 _NA_
 
-TODO:
-
-- [ ] add travis or github actions integration to deploy on commit to master when version number is increased.
-
 <!-- _How to deploy the code/app into test/staging/production_ -->
 
 ## other
@@ -105,4 +101,4 @@ Other possible areas of improvement
 - [x] compare checksum source and destination
 - [x] return checksum result ✅ or ❌
 - [ ] support copy to multiple destinations
-- [ ] travis or github action to rrun build
+- [ ] travis or github action to run build, and deploy to release section when version number is increased
