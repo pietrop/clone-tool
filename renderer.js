@@ -129,8 +129,8 @@ function setStatusToFailed() {
 
 function saveHashResults({ destDir, fileNameNoExtension, hashJson }) {
   fs.writeFileSync(path.join(destDir, `${fileNameNoExtension}_md5sums.json`), JSON.stringify(hashJson, null, 2));
-  const text = iterateThroughEntries(hashJson, [], destDir);
-  // updateLogs(text);
+  // const text = iterateThroughEntries(hashJson, [], destDir);
+  const text = iterateThroughEntries(hashJson, []);
   fs.writeFileSync(path.join(destDir, `${fileNameNoExtension}_md5sums.txt`), text);
 }
 
@@ -141,7 +141,7 @@ function saveHashResults({ destDir, fileNameNoExtension, hashJson }) {
  * @param {array} results - list
  * @param {string} path - initial path of folder
  */
-function iterateThroughEntries(obj, results = [], path = '/') {
+function iterateThroughEntries(obj, results = [], path = '') {
   const r = results;
   let p = path;
   Object.keys(obj).forEach((key) => {
