@@ -6,11 +6,10 @@ function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 410,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
-      preload: path.join(__dirname, 'preload.js'),
     },
   });
 

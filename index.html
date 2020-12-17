@@ -9,10 +9,20 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
   <title>Clone Tool</title>
   <link rel="stylesheet" type="text/css" href="./node_modules/materialize-css/dist/css/materialize.min.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     button {
       background-color: #0d47a1 !important;
+    }
+
+    textarea.materialize-textarea {
+      /* line-height: normal; */
+      overflow-y: scroll;
+      /* padding: .8rem 0 .8rem 0; */
+      resize: auto;
+      /* min-height: 3rem; */
+      /* -webkit-box-sizing: border-box; */
+      /* box-sizing: border-box; */
+      width: 100% !important;
     }
   </style>
 </head>
@@ -31,17 +41,20 @@
           </div>
         </div>
         <div class="input-field ">
-          <i class="material-icons prefix" id="addSourceBtbn">add_circle</i>
+          <!-- <i class="material-icons prefix" id="addSourceBtbn">add_circle</i> -->
+          <span style="cursor: pointer;" class="material-icons prefix" id="addSourceBtbn">+</span>
           <input id="sourcePath" type="text" disabled>
           <span class="helper-text" data-error="wrong" data-success="right">Source</span>
         </div>
         <div class="input-field">
-          <i class="material-icons prefix" id="addDestinationBtbn">add_circle</i>
+          <span style="cursor: pointer;" class="material-icons prefix" id="addDestinationBtbn">+</span>
           <input id="destionationPath" type="text" disabled>
           <span class="helper-text" data-error="wrong" data-success="right">Destination</span>
         </div>
-
       </div>
+      <!-- <div class="card-action">
+        <textarea id="log" class="materialize-textarea" rows="6" cols="50" disabled></textarea>
+      </div> -->
       <div class="card-action">
         <button id="cloneBtn" class="waves-effect waves-light btn">Clone</button>
       </div>

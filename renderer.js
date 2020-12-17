@@ -22,6 +22,7 @@ const addDestinationBtbnEl = document.getElementById('addDestinationBtbn');
 const destionationPathEl = document.getElementById('destionationPath');
 const cloneBtnEl = document.getElementById('cloneBtn');
 const statusEl = document.getElementById('status');
+// const logEl = document.getElementById('log');
 
 addSourceBtbnEl.onclick = () => {
   resetStatus();
@@ -129,6 +130,7 @@ function setStatusToFailed() {
 function saveHashResults({ destDir, fileNameNoExtension, hashJson }) {
   fs.writeFileSync(path.join(destDir, `${fileNameNoExtension}_md5sums.json`), JSON.stringify(hashJson, null, 2));
   const text = iterateThroughEntries(hashJson, [], destDir);
+  // updateLogs(text);
   fs.writeFileSync(path.join(destDir, `${fileNameNoExtension}_md5sums.txt`), text);
 }
 
@@ -157,3 +159,7 @@ function iterateThroughEntries(obj, results = [], path = '/') {
   });
   return r.join('\n');
 }
+
+// function updateLogs(log) {
+//   logEl.value = log;
+// }
